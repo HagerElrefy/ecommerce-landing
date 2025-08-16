@@ -1,0 +1,7 @@
+.rewievs-container {
+  background-image: url("/assets/bg-review.png");
+  background-size: cover;
+  background-color: rgba(248, 43, 169, 0.6);
+  background-blend-mode: multiply;
+  height: 500px;
+}/*# sourceMappingURL=reviews-section.component.css.map */

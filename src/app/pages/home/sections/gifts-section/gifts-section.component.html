@@ -1,0 +1,19 @@
+<section>
+    <div class="flex flex-column lg:flex-row  justify-content-between align-content-center row">
+        <app-gifts-card class="col-12 lg:col-4" [data]="giftCardData"></app-gifts-card>
+        <div class="col-12 lg:col-8 relative">
+
+            <app-gifts-slider [data]="giftSliderData" [responsiveOptions]="responsiveOptions">
+                <ng-template let-item>
+                    <app-gifts-card [data]="item"></app-gifts-card>
+                </ng-template>
+            </app-gifts-slider>
+
+        </div>
+    </div>
+    <div class="flex flex-column lg:flex-row justify-content-between ">
+        <app-gift-card *ngFor="let data of giftsInfoData" class="flex-1" [data]="data">
+        </app-gift-card>
+    </div>
+
+</section>

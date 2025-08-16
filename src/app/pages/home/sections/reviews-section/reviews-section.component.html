@@ -1,0 +1,9 @@
+<section class="rewievs-container m-3 p-6 border-round-2xl">
+    <div class="w-full">
+        <app-slider [data]="reviews" [responsiveOptions]="responsiveOptions">
+            <ng-template let-review>
+                <app-review-card [review]="review"></app-review-card>
+            </ng-template>
+        </app-slider>
+    </div>
+</section>

@@ -1,0 +1,11 @@
+.popular-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 4px;
+    background-color: #f82ba9;
+    box-shadow: 5px -10px 20px 15px #FCAADD;
+    border-radius: 3px;
+}

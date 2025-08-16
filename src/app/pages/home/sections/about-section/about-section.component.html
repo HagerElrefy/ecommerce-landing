@@ -1,0 +1,43 @@
+<section class="m-5 flex flex-column lg:flex-row gap-3 justify-content-between align-content-center align-items-center">
+    <div class="grid nested-grid gap-3 flex-1">
+
+        <div class="col-6">
+            <div class="first w-full  h-10rem lg:h-20rem">
+                <img src="assets/about-1.png" alt="about-1" class="w-full h-full object-cover" />
+            </div>
+        </div>
+
+        <div class="col-6 grid gap-3">
+            <div class="col-12 w-full h-5rem lg:h-10rem">
+                <img src="assets/about-2.png" alt="about-2" class="w-full h-full border-circle object-cover" />
+            </div>
+            <div class="third col-12 w-full h-5rem lg:h-10rem">
+                <img src="assets/about-3.png" alt="about-3" class="w-full h-full object-cover" />
+            </div>
+        </div>
+
+    </div>
+
+    <div class="flex flex-column justify-content-start text- align-items-start gap-2 flex-1 mx-3">
+        <h5 class="font-bold pink-1">{{'About Us' |uppercase}}</h5>
+        <h4 class="font-bold text-3xl line-height-3 m-0">
+            We Provide Best And Quality <span class="pink-1">Gifts</span> <br> <span class="pink-1">Box</span> Product
+            For You
+        </h4>
+        <p class="blue-5 line-height-3">Recusandae tempora aut laborum molestias veniam. A commodi sequi accusantium
+            <br> ullam cupiditate.
+            Neque quidem qui et autem dolor dicta necessitatibus ut ad.
+        </p>
+
+        <app-basic-button [btnValue]="'Discover More'"></app-basic-button>
+
+        <div class="grid">
+            <div class="col-12 lg:col-6 flex align-items-center justify-content-start" *ngFor="let item of list">
+                <p-avatar icon="pi pi-check" class="mr-2 bg-purple-1 text-white" size="large" shape="circle" />
+                <p class="blue-4">{{item}}</p>
+
+            </div>
+        </div>
+
+    </div>
+</section>

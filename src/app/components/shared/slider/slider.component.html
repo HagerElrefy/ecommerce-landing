@@ -1,0 +1,16 @@
+<div class="card relative">
+    <p-carousel [value]="data" [responsiveOptions]="responsiveOptions">
+        <ng-template let-item pTemplate=" item">
+            <ng-container *ngTemplateOutlet="customTemplate; context: {$implicit: item}"></ng-container>
+        </ng-template>
+        <ng-template pTemplate="previousicon">
+            <span
+                class="custom-prev bg-pink-1 text-lg py-2 px-3 border-0 text-white rounded-full cursor-pointer border-circle">‹</span>
+        </ng-template>
+
+        <ng-template pTemplate="nexticon">
+            <span
+                class="custom-next bg-pink-1 text-lg py-2 px-3 border-0 text-white rounded-full cursor-pointer border-circle">›</span>
+        </ng-template>
+    </p-carousel>
+</div>

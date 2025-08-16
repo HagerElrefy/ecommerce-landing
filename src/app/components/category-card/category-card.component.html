@@ -1,0 +1,9 @@
+<div class="border-round-2xl bg-pink-10 flex justify-content-between align-items-center">
+    <div class="flex-1">
+        <img [src]="category.icon" [alt]="category.category" class="w-full h-6rem">
+    </div>
+    <div class="flex-1 flex flex-column justify-content-center align-content-center gap-2">
+        <h5 class="m-0 font-bold">{{category.category}}</h5>
+        <p class="m-0 blue-5">{{category.numOfItems | number:"2.0"}} Items</p>
+    </div>
+</div>

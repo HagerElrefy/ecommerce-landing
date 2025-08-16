@@ -1,0 +1,17 @@
+::ng-deep .p-carousel-indicator.p-carousel-indicator-active button {
+  transform: scaleX(2);
+  background-color: white;
+}
+
+.custom-prev,
+.custom-next {
+  background-color: red;
+  color: white;
+  font-size: 1.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=slider.component.css.map */

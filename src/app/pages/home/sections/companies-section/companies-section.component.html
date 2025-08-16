@@ -1,0 +1,11 @@
+<section class="m-3 lg:mx-8 bg-pink-10 border-round flex flex-column justify-content-between align-items-center">
+    <h4 class="company-sec-title text-2xl font-bold text-center">
+        Trusted By Over <span class="pink-1">4.5k+</span> Companies
+    </h4>
+
+    <div class="grid justify-content-center align-items-center m-4">
+        <div *ngFor="let company of companies" class="col-4 sm:col-3 md:col-2 lg:col-2 flex justify-content-center">
+            <img [src]="company" alt="company-logo" class="w-full h-2rem md:h-5rem lg:h-8rem object-contain" />
+        </div>
+    </div>
+</section>
