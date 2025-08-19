@@ -1,0 +1,64 @@
+<header class="flex justify-content-between align-items-center relative">
+
+    <app-logo></app-logo>
+
+    <!-- Navigation Links -->
+    <nav class="" [ngClass]="{
+            'hidden md:flex': !linksToggele,
+            'flex flex-column align-items-start absolute top-0 left-0 bg-white md:align-items-center md:static md:flex-row md:bg-transparent': linksToggele
+        }">
+        <div class="logo-icon" [ngClass]="{
+            'hidden' : !linksToggele,
+            'flex justify-content-between align-items-center w-full md:hidden' : linksToggele
+        }">
+            <app-logo></app-logo>
+
+            <button pButton (click)="toggleShow()" class="blue-1">
+                <i class="pi pi-times blue-1"></i>
+            </button>
+        </div>
+        <a class="cursor-pointer blue-1 hover:text-pink-500 transition-duration-200" *ngFor="let item of items">
+            {{ item.label|titlecase}}
+        </a>
+    </nav>
+
+    <!-- Icons + Menu Toggle -->
+    <div class="icons flex align-items-center pink-1 ">
+        <!-- Icons -->
+        @for (icon of iconsItems; track $index) {
+        @if (icon.badge) {
+        <i [class]="icon.icon" class="align-self-center cursor-pointer text-lg"></i>
+        }
+        @else {
+        <i [class]="icon.icon" class="align-self-center cursor-pointer text-lg"></i>
+        }
+        }
+
+
+        <!-- Mobile Menu Button -->
+        <div class="menu flex align-items-center md:hidden cursor-pointer" (click)="toggleShow()">
+            <i class="pi pi-align-right text-2xl"></i>
+        </div>
+
+        <!-- <div class="card flex justify-center">
+    <p-button (click)="showDialog()" label="Show" />
+    <p-dialog header="Edit Profile" [modal]="true" [(visible)]="visible" [style]="{ width: '25rem' }">
+        <span class="p-text-secondary block mb-8">Update your information.</span>
+        <div class="flex items-center gap-4 mb-4">
+            <label for="username" class="font-semibold w-24">Username</label>
+            <input pInputText id="username" class="flex-auto" autocomplete="off" />
+        </div>
+        <div class="flex items-center gap-4 mb-8">
+            <label for="email" class="font-semibold w-24">Email</label>
+            <input pInputText id="email" class="flex-auto" autocomplete="off" />
+        </div>
+        <div class="flex justify-end gap-2">
+            <p-button label="Cancel" severity="secondary" (click)="visible = false" />
+            <p-button label="Save" (click)="visible = false" />
+        </div>
+    </p-dialog>
+</div> -->
+        <!-- <app-basic-button [btnValue]="'log in'" (click)=(clickedOnLogInBtn())></app-basic-button> -->
+        <!-- <app-basic-button [btnValue]="'log in'"></app-basic-button> -->
+    </div>
+</header>

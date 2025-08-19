@@ -1,0 +1,9 @@
+.features {
+    border-radius: 20px;
+    padding: 40px;
+    gap: 40px;
+
+    @media (max-width:480px) {
+        gap: 24px
+    }
+}

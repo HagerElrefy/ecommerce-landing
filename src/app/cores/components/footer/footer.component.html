@@ -1,0 +1,23 @@
+<footer class="flex flex-column justify-content-between">
+    <div class="links flex flex-wrap justify-content-center md:justify-content-evenly align-items-center">
+        <a class="font-bold cursor-pointer" *ngFor="let link of footerLinks">
+            {{ link }}
+        </a>
+    </div>
+
+    <div class="text-content flex flex-column align-items-center">
+        <h5 class="">
+            Get <span class="pink-1">20%</span> Off Discount Coupon
+        </h5>
+        <p class="blue-5">
+            By Subscribe Our Newsletter
+        </p>
+    </div>
+
+    <div class="flex justify-content-center align-items-center w-full md:w-auto m-auto">
+        <p-inputgroup class="">
+            <input pInputText placeholder="Enter Your Email" class="" />
+            <p-button label="Subscribe" />
+        </p-inputgroup>
+    </div>
+</footer>

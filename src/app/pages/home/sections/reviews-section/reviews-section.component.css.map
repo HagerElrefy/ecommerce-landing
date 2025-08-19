@@ -1,1 +1,1 @@
-{"version":3,"sources":["reviews-section.component.scss","reviews-section.component.css"],"names":[],"mappings":"AAAA;EACI,8CAAA;EACA,sBAAA;EAGA,yCAAA;EAEA,+BAAA;EAEA,aAAA;ACHJ","file":"reviews-section.component.css"}
+{"version":3,"sources":["reviews-section.component.scss","reviews-section.component.css"],"names":[],"mappings":"AAAA;EACI,8CAAA;EACA,sBAAA;EACA,+BAAA;EACA,mCAAA;EACA,aAAA;ACCJ","file":"reviews-section.component.css"}

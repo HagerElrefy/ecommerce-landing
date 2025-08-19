@@ -1,0 +1,81 @@
+.btn-container {
+    position: absolute;
+    top: 375px;
+    right: 56px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+
+    @media (max-width:480px) {
+        width: 41px;
+        height: 18px;
+        top: 188px;
+        right: 16px;
+        gap: 5.24px;
+    }
+}
+
+.btn-container button {
+    width: 41px;
+    height: 41px;
+    border-radius: 46.6px;
+    padding: 8.39px 13.22px;
+    color: #757F95;
+    cursor: pointer;
+
+    @media (max-width:480px) {
+        width: 17.89px;
+        height: 17.89px;
+        padding: 3.66px 5.77px;
+        border-radius: 20.33px;
+        cursor: pointer;
+    }
+}
+
+.btn-container button img {
+
+    width: 10.67px;
+    height: 17.64px;
+
+    @media (max-width:480px) {
+        width: 4.65px;
+        height: 7.7px;
+    }
+}
+
+
+:host ::ng-deep ul.p-carousel-indicator-list {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 7px;
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+    z-index: 10;
+    list-style: none;
+
+    @media (max-width:480px) {
+        display: none;
+    }
+}
+
+:host ::ng-deep .p-carousel-indicator {
+    height: 7px;
+    border-radius: 46.6px;
+    transition: transform 0.3s ease;
+}
+
+:host ::ng-deep .p-carousel-indicator button {
+    height: 7px;
+    width: 7px;
+    border-radius: 46.6px;
+    background-color: #F82BA9;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+::ng-deep .p-carousel-indicator.p-carousel-indicator-active button {
+    width: 19px;
+}

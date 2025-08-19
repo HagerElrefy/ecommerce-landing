@@ -1,0 +1,9 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    @media (max-width:480px) {
+        gap: 24px;
+    }
+}

@@ -1,0 +1,7 @@
+<div class="feature-card flex flex-column lg:flex-row justify-content-center align-items-center">
+    <img [src]="feature.icon" [alt]="feature.feature" class="">
+    <div class="flex flex-column  justify-content-between align-items-center  md:align-items-start">
+        <h4 class="font-semibold">{{feature.feature|titlecase}}</h4>
+        <p class="blue-5">{{feature.details}} Items</p>
+    </div>
+</div>

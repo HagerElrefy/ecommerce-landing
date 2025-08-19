@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { CategoryCardComponent } from '../../../../components/category-card/category-card.component';
+import { CategoryCardComponent } from '../../../components/category-card/category-card.component';
 
 @Component({
   selector: 'app-categories-section',

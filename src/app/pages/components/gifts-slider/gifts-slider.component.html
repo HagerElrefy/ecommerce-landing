@@ -1,0 +1,16 @@
+<div class="card relative">
+    <p-carousel [value]="data" [responsiveOptions]="responsiveOptions" [showNavigators]="false" #carouselRef>
+        <ng-template let-item pTemplate=" item">
+            <ng-container *ngTemplateOutlet="customTemplate; context: {$implicit: item}"></ng-container>
+        </ng-template>
+    </p-carousel>
+
+    <div class="btn-container">
+        <button (click)="goPrev()" pButton class="my-prev bg-white border-0 rounded-full cursor-pointer border-circle">
+            <img src="assets/prev.png" alt="prev">
+        </button>
+        <button (click)="goNext()" pButton class="my-next bg-white border-0 rounded-full cursor-pointer border-circle">
+            <img src="assets/next.png" alt="prev">
+        </button>
+    </div>
+</div>

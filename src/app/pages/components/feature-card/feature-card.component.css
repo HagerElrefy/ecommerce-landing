@@ -1,0 +1,31 @@
+.feature-card {
+  gap: 16px;
+}
+
+.feature-card img {
+  width: 65px;
+  height: 65px;
+}
+
+.feature-card div {
+  gap: 5px;
+}
+
+.feature-card div h4 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #160E4B;
+}
+
+.feature-card div p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28.8px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}/*# sourceMappingURL=feature-card.component.css.map */

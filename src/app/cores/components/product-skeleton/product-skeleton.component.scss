@@ -1,0 +1,50 @@
+.skeleton-card {
+    width: 302px;
+    height: 371px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-sizing: border-box;
+}
+
+:host ::ng-deep .media .p-skeleton {
+    height: 272px !important;
+    border-radius: 20px;
+}
+
+:host ::ng-deep .p-skeleton.media {
+    width: 100%;
+    height: 272px;
+    border-radius: 20px;
+    display: block;
+}
+
+.skeleton-card .body {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.skeleton-card .body .content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 60%;
+}
+
+:host ::ng-deep .skeleton-card .body .content-container .p-skeleton.title {
+    width: 100%;
+    height: 20px;
+}
+
+:host ::ng-deep .skeleton-card .body .content-container .p-skeleton.rating,
+:host ::ng-deep .skeleton-card .body .content-container .p-skeleton.pricing {
+    width: 80%;
+    height: 18px;
+}
+
+:host ::ng-deep .skeleton-card .body>.p-skeleton {
+    flex-shrink: 0;
+}

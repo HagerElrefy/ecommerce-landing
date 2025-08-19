@@ -1,9 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import "typeface-roboto/index.css";
+@import "@fontsource/inter/300.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
 
 * {
     font-family: sans-serif;
-    // margin: 0;
+    margin: 0;
 }
 
 .text-line {
@@ -18,331 +27,99 @@
 
 
 // colors
-/* 🌸 Pink Shades */
-.pink-1 {
-    color: #F82BA9;
-}
-
-.bg-pink-1 {
-    background-color: #F82BA9 !important;
-}
-
-.pink-2 {
-    color: #F940B2;
-}
-
-.bg-pink-2 {
-    background-color: #F940B2;
-}
-
-.pink-3 {
-    color: #F955BA;
-}
-
-.bg-pink-3 {
-    background-color: #F955BA;
-}
-
-.pink-4 {
-    color: #FA6BC3;
-}
-
-.bg-pink-4 {
-    background-color: #FA6BC3;
-}
-
-.pink-5 {
-    color: #FB80CB;
-}
-
-.bg-pink-5 {
-    background-color: #FB80CB;
-}
-
-.pink-6 {
-    color: #FB95D4;
-}
-
-.bg-pink-6 {
-    background-color: #FB95D4;
-}
-
-.pink-7 {
-    color: #FCAADD;
-}
-
-.bg-pink-7 {
-    background-color: #FCAADD;
-}
-
-.pink-8 {
-    color: #FDBFE5;
-}
-
-.bg-pink-8 {
-    background-color: #FDBFE5;
-}
-
-.pink-9 {
-    color: #FED5EE;
-}
-
-.bg-pink-9 {
-    background-color: #FED5EE;
-}
-
-.pink-10 {
-    color: #FEEAF6;
-}
-
-.bg-pink-10 {
-    background-color: #FEEAF6;
-}
-
-
-/* 🔵 Dark Blue Shades */
-.blue-1 {
-    color: #160E4B;
-}
-
-.bg-blue-1 {
-    background-color: #160E4B;
-}
-
-.blue-2 {
-    color: #2D265D;
-}
-
-.bg-blue-2 {
-    background-color: #2D265D;
-}
-
-.blue-3 {
-    color: #453E6F;
-}
-
-.bg-blue-3 {
-    background-color: #453E6F;
-}
-
-.blue-4 {
-    color: #5C5681;
-}
-
-.bg-blue-4 {
-    background-color: #5C5681;
-}
-
-.blue-5 {
-    color: #757F95;
-}
-
-.bg-blue-5 {
-    background-color: #757F95;
-}
-
-.blue-6 {
-    color: #8A86A5;
-}
-
-.bg-blue-6 {
-    background-color: #8A86A5;
-}
-
-.blue-7 {
-    color: #A29FB7;
-}
-
-.bg-blue-7 {
-    background-color: #A29FB7;
-}
-
-.blue-8 {
-    color: #B9B7C9;
-}
-
-.bg-blue-8 {
-    background-color: #B9B7C9;
-}
-
-.blue-9 {
-    color: #D0CFDB;
-}
-
-.bg-blue-9 {
-    background-color: #D0CFDB;
-}
-
-.blue-10 {
-    color: #E8E7ED;
-}
-
-.bg-blue-10 {
-    background-color: #E8E7ED;
-}
-
-
-/* 💜 Purple Shades */
-.purple-1 {
-    color: #8C52FF;
-}
-
-.bg-purple-1 {
-    background-color: #8C52FF;
-}
-
-.purple-2 {
-    color: #9763FF;
-}
-
-.bg-purple-2 {
-    background-color: #9763FF;
-}
-
-.purple-3 {
-    color: #A375FF;
-}
-
-.bg-purple-3 {
-    background-color: #A375FF;
-}
-
-.purple-4 {
-    color: #AF86FF;
-}
-
-.bg-purple-4 {
-    background-color: #AF86FF;
-}
-
-.purple-5 {
-    color: #BA97FF;
-}
-
-.bg-purple-5 {
-    background-color: #BA97FF;
-}
-
-.purple-6 {
-    color: #C5A8FF;
-}
-
-.bg-purple-6 {
-    background-color: #C5A8FF;
-}
-
-.purple-7 {
-    color: #D1BAFF;
-}
-
-.bg-purple-7 {
-    background-color: #D1BAFF;
-}
-
-.purple-8 {
-    color: #DDCBFF;
-}
-
-.bg-purple-8 {
-    background-color: #DDCBFF;
-}
-
-.purple-9 {
-    color: #E8DCFF;
-}
-
-.bg-purple-9 {
-    background-color: #E8DCFF;
-}
-
-.purple-10 {
-    color: #F3EEFF;
-}
-
-.bg-purple-10 {
-    background-color: #F3EEFF;
-}
-
-
-/* 💚 Green Shades */
-.green-1 {
-    color: #39D8A3;
-}
-
-.bg-green-1 {
-    background-color: #39D8A3;
-}
-
-.green-2 {
-    color: #4DDCAC;
-}
-
-.bg-green-2 {
-    background-color: #4DDCAC;
-}
-
-.green-3 {
-    color: #61E0B5;
-}
-
-.bg-green-3 {
-    background-color: #61E0B5;
-}
-
-.green-4 {
-    color: #74E4BF;
-}
-
-.bg-green-4 {
-    background-color: #74E4BF;
-}
-
-.green-5 {
-    color: #88E8C8;
-}
-
-.bg-green-5 {
-    background-color: #88E8C8;
-}
-
-.green-6 {
-    color: #9CEBD1;
-}
-
-.bg-green-6 {
-    background-color: #9CEBD1;
-}
-
-.green-7 {
-    color: #B0EFDA;
-}
-
-.bg-green-7 {
-    background-color: #B0EFDA;
-}
-
-.green-8 {
-    color: #C4F3E3;
-}
-
-.bg-green-8 {
-    background-color: #C4F3E3;
-}
-
-.green-9 {
-    color: #D7F7ED;
-}
-
-.bg-green-9 {
-    background-color: #D7F7ED;
-}
-
-.green-10 {
-    color: #EBFBF6;
-}
 
-.bg-green-10 {
-    background-color: #EBFBF6;
+/* 🎨 Pink Shades */
+$pink-shades: (
+    1: #F82BA9,
+    2: #F940B2,
+    3: #F955BA,
+    4: #FA6BC3,
+    5: #FB80CB,
+    6: #FB95D4,
+    7: #FCAADD,
+    8: #FDBFE5,
+    9: #FED5EE,
+    10: #FEEAF6
+);
+
+$blue-shades: (
+    1: #160E4B,
+    2: #2D265D,
+    3: #453E6F,
+    4: #5C5681,
+    5: #757F95,
+    6: #8A86A5,
+    7: #A29FB7,
+    8: #B9B7C9,
+    9: #D0CFDB,
+    10: #E8E7ED
+);
+
+$purple-shades: (
+    1: #8C52FF,
+    2: #9763FF,
+    3: #A375FF,
+    4: #AF86FF,
+    5: #BA97FF,
+    6: #C5A8FF,
+    7: #D1BAFF,
+    8: #DDCBFF,
+    9: #E8DCFF,
+    10: #F3EEFF
+);
+
+$green-shades: (
+    1: #39D8A3,
+    2: #4DDCAC,
+    3: #61E0B5,
+    4: #74E4BF,
+    5: #88E8C8,
+    6: #9CEBD1,
+    7: #B0EFDA,
+    8: #C4F3E3,
+    9: #D7F7ED,
+    10: #EBFBF6
+);
+
+/* 🔁 Generate Classes */
+@each $index, $color in $pink-shades {
+    .pink-#{$index} {
+        color: $color;
+    }
+
+    .bg-pink-#{$index} {
+        background-color: $color !important;
+    }
+}
+
+@each $index, $color in $blue-shades {
+    .blue-#{$index} {
+        color: $color;
+    }
+
+    .bg-blue-#{$index} {
+        background-color: $color !important;
+    }
+}
+
+@each $index, $color in $purple-shades {
+    .purple-#{$index} {
+        color: $color;
+    }
+
+    .bg-purple-#{$index} {
+        background-color: $color !important;
+    }
+}
+
+@each $index, $color in $green-shades {
+    .green-#{$index} {
+        color: $color;
+    }
+
+    .bg-green-#{$index} {
+        background-color: $color !important;
+    }
 }
 
 .carnation {
@@ -354,10 +131,70 @@
 
 // fonts
 
-.fs-80 {
+.text-80px {
     font-size: 80px;
 }
 
-.fs-64 {
+.text-64px {
     font-size: 64px;
+}
+
+.text-51px {
+    font-size: 51px;
+}
+
+.text-41px {
+    font-size: 41px;
+}
+
+.text-33px {
+    font-size: 33px;
+}
+
+.text-26px {
+    font-size: 26px;
+}
+
+.text-21px {
+    font-size: 21px;
+}
+
+.text-17px {
+    font-size: 17px;
+}
+
+.text-13px {
+    font-size: 13px;
+}
+
+.mx-80px {
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.px-80px {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+// font-family 
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+section {
+    margin: 16px 80px;
+
+    @media (max-width:480px) {
+        & {
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+    }
+
 }

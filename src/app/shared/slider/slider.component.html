@@ -1,0 +1,14 @@
+<p-carousel class="relative" [value]="data" [responsiveOptions]="responsiveOptions">
+    <ng-template let-item pTemplate="item">
+        <div class="item-container w-full">
+            <ng-container *ngTemplateOutlet="customTemplate; context: {$implicit: item}"></ng-container>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="previousicon">
+        <img src="assets/prev.png" alt="prev">
+    </ng-template>
+
+    <ng-template pTemplate="nexticon">
+        <img src="assets/next.png" alt="next">
+    </ng-template>
+</p-carousel>

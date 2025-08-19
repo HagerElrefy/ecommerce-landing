@@ -1,12 +1,113 @@
-.company-sec-title {
-    position: relative;
+.companies {
+    gap: 40px;
+    border-radius: 20px;
+    padding: 40px 24px;
+
+    @media (max-width:480px) {
+        opacity: 1;
+        gap: 16px;
+        padding-top: 16px;
+        padding-right: 24px;
+        padding-bottom: 16px;
+        padding-left: 16px;
+
+    }
 }
 
-.company-sec-title::after {
+.companies .company-sec-title {
+    position: relative;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 100%;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+
+    @media (max-width:480px) {
+        font-size: 20px;
+    }
+}
+
+.companies .company-sec-title::after {
     content: "";
-    width: 50%;
-    color: #F82BA9;
+    width: 161px;
+    height: 2px;
+    background-color: #F82BA9;
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     left: 0;
+}
+
+// :host ::ng-deep .companies .p-carousel .p-carousel-viewport {
+//     width: 100%;
+//     height: 51px;
+//     margin: 0 auto;
+
+//     @media (max-width:480px) {
+//         height: 30px;
+//     }
+// }
+
+// :host ::ng-deep .companies .p-carousel .p-carousel-item {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 100%;
+
+//     @media (max-width:480px) {
+//         flex: 0 0 85px;
+//     }
+// }
+
+// :host ::ng-deep .companies .p-carousel .p-carousel-item img {
+//     width: 100%;
+//     height: 51px;
+//     object-fit: contain;
+
+//     @media (max-width:480px) {
+//         width: 100%;
+//         height: 30px;
+//     }
+// }
+
+
+
+
+
+
+:host ::ng-deep .companies-logos {
+    width: 100%;
+    height: 51px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+:host ::ng-deep .companies-logos .company-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    margin: 0 20px;
+}
+
+:host ::ng-deep .companies-logos .company-item img {
+    width: 100%;
+    height: 51px;
+    object-fit: contain;
+}
+
+@media (max-width: 480px) {
+    :host ::ng-deep .companies-logos {
+        height: 30px;
+    }
+
+    :host ::ng-deep .companies-logos .company-item {
+        width: 85px;
+        margin: 0 10px;
+    }
+
+    :host ::ng-deep .companies-logos .company-item img {
+        height: 30px;
+    }
 }

@@ -1,0 +1,101 @@
+.review-card {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width:480px) {
+        margin-inline-start: 16px;
+
+    }
+}
+
+.review-card .header {
+    gap: 16px;
+    padding: 24px;
+}
+
+.header h4 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-transform: capitalize;
+
+}
+
+
+:host ::ng-deep .header .p-avatar {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: visible;
+}
+
+:host ::ng-deep .header .p-avatar img {
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+:host ::ng-deep .header .p-avatar::before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: -6px;
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
+    border-radius: 50%;
+    background: conic-gradient(transparent 0deg 180deg,
+            #f82ba9 180deg 270deg,
+            transparent 270deg 360deg);
+    z-index: 1;
+}
+
+
+.review-card p {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+
+.header p {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+
+.header div {
+    gap: 4px;
+}
+
+
+
+
+.review-card .footer {
+    gap: 16px;
+}
+
+.review-card .footer .p-avatar {
+    width: 76.58px;
+}

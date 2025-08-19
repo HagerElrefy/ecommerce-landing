@@ -1,0 +1,19 @@
+<div class="card-container">
+    <div class="relative card border-0">
+        <img [src]="data.image" alt="gifts" class="w-full h-23rem border-round-3xl" />
+        <div class="overlay-content text-container">
+            <h4 class="" [ngClass]="data.titleBaseColor ? 'pink-1' : 'text-white'">
+                {{ data.title |titlecase}}
+            </h4>
+
+
+            <p class="font-semibold" [ngClass]="data.titleBaseColor ? 'blue-1' : 'sm:text-white'">
+                {{ data.text|titlecase}}
+            </p>
+
+            <button class="bg-pink-1 text-white">
+                {{data.btn|titlecase}}
+            </button>
+        </div>
+    </div>
+</div>

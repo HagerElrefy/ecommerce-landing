@@ -1,0 +1,88 @@
+footer {
+    background-image: url("../../../../../public/assets/bg-pic-2.png");
+    margin: 0 !important;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    @media (max-width:480px) {
+        gap: 16px;
+        padding: 16px;
+    }
+}
+
+footer .links {
+    gap: 80px;
+    padding-right: 80px;
+    padding-left: 80px;
+
+    @media (max-width:480px) {
+        gap: 16px;
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
+
+footer .text-content {
+    gap: 8px;
+}
+
+footer .text-content h5 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+
+    @media (max-width:480px) {
+        font-size: 20px;
+    }
+}
+
+footer .text-content p {
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+
+    @media (max-width:480px) {
+        font-size: 16px;
+    }
+}
+
+:host ::ng-deep .p-inputgroup {
+    border-radius: 10px;
+    margin: auto;
+}
+
+:host ::ng-deep .p-inputgroup input {
+    border: none;
+    padding: 16px;
+    border-radius: 10px 0 0 10px;
+}
+
+:host ::ng-deep .p-inputgroup .p-button {
+    // width: 107px;
+    height: 48px;
+    gap: 5;
+    border-radius: 10px;
+    padding: 8px;
+    background-color: #F82BA9;
+    box-shadow: 0px 0px 40px 5px rgba(0, 0, 0, 0.05);
+    border: none;
+
+}
+
+:host ::ng-deep .p-inputgroup .p-button:hover {
+    background-color: #f82ba9a7;
+}

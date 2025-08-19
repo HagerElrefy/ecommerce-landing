@@ -1,1 +1,52 @@
-/*# sourceMappingURL=best-seller-section.component.css.map */
+.best-seller {
+  gap: 24px;
+}
+
+.best-seller .text-content {
+  width: 400px;
+}
+@media (max-width: 480px) {
+  .best-seller .text-content {
+    width: 100%;
+  }
+}
+
+.best-seller .text-content h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 17px;
+  line-height: 30.6px;
+  letter-spacing: 4px;
+  vertical-align: middle;
+}
+
+.best-seller .text-content .text-and-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.best-seller .text-content .text-and-header h5 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 30px;
+  line-height: 40.8px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.best-seller .text-content .text-and-header p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28.8px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+@media (max-width: 480px) {
+  .best-seller .text-content .text-and-header p {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=best-seller-section.component.css.map */

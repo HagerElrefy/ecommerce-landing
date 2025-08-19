@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FeatureCardComponent } from "../../../../components/feature-card/feature-card.component";
+import { FeatureCardComponent } from "../../../components/feature-card/feature-card.component";
 import { CommonModule } from '@angular/common';
 
 @Component({

@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { GiftsSliderComponent } from '../../../../components/gifts-slider/gifts-slider.component';
-import { GiftsCardComponent } from '../../../../components/gifts-card/gifts-card.component';
-import { GiftCardComponent } from "../../../../components/gift-card/gift-card.component";
+import { GiftsSliderComponent } from '../../../components/gifts-slider/gifts-slider.component';
+import { GiftsCardComponent } from '../../../components/gifts-card/gifts-card.component';
+import { GiftCardComponent } from "../../../components/gift-card/gift-card.component";
 
 @Component({
   selector: 'app-gifts-section',

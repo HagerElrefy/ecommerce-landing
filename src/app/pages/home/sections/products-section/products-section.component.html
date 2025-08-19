@@ -1,6 +1,12 @@
-<section class="m-3">
-    <h4 class="popular-title text-2xl relative inline-block">Popular Items</h4>
-    <div class="mt-2 grid align-items-stretch justify-content-between">
+<section class="products">
+    <h4 class="popular-title font-bold">{{'Popular Items' | titlecase}}</h4>
+    <h1>{{loader.loading()}}</h1>
+    <div *ngIf="loader.loading() ">
+        <div class="loader-container">
+            <app-product-skeleton *ngFor="let loader of loaderCardsarr"></app-product-skeleton>
+        </div>
+    </div>
+    <div class="grid align-items-stretch justify-content-between">
         <app-product-card *ngFor="let product of products" [product]="product" class="col-12 md:col-6 lg:col-3 h-full">
         </app-product-card>
     </div>

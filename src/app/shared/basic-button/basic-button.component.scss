@@ -1,0 +1,19 @@
+.base-btn {
+    padding: 9.32px 18.64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4.66px;
+    border: none;
+    box-shadow: 0px 0px 37.28px 4.66px rgba(0, 0, 0, 0.05);
+    border-radius: 9.32px;
+
+}
+
+.base-btn span,
+.base-btn i {
+    font-weight: 500;
+    font-size: 14.91px;
+    line-height: 26.84px;
+    vertical-align: middle;
+}

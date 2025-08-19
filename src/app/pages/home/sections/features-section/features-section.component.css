@@ -1,1 +1,10 @@
-/*# sourceMappingURL=features-section.component.css.map */
+.features {
+  border-radius: 20px;
+  padding: 40px;
+  gap: 40px;
+}
+@media (max-width: 480px) {
+  .features {
+    gap: 24px;
+  }
+}/*# sourceMappingURL=features-section.component.css.map */

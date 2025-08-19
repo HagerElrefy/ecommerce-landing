@@ -1,16 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { ProductCardComponent } from "../../../../components/product-card/product-card.component";
-import { SliderComponent } from "../../../../components/shared/slider/slider.component";
-import { BasicButtonComponent } from "../../../../components/shared/basic-button/basic-button.component";
+import { ProductCardComponent } from "../../../components/product-card/product-card.component";
+import { SliderComponent } from "../../../../shared/slider/slider.component";
+import { BasicButtonComponent } from "../../../../shared/basic-button/basic-button.component";
+import { ProductSkeletonComponent } from '../../../../cores/components/product-skeleton/product-skeleton.component';
+import { LoaderService } from '../../../../cores/service/loader.service';
 
 @Component({
   selector: 'app-best-seller-section',
-  imports: [CommonModule, ProductCardComponent, SliderComponent, BasicButtonComponent],
+  imports: [CommonModule, ProductCardComponent, SliderComponent, BasicButtonComponent, ProductSkeletonComponent],
   templateUrl: './best-seller-section.component.html',
   styleUrl: './best-seller-section.component.scss'
 })
 export class BestSellerSectionComponent implements OnChanges {
+  constructor(public loader: LoaderService) { }
   ngOnChanges(changes: SimpleChanges): void {
     console.log(changes);
     this.somProducts = this.products ? this.products.slice(0, 4) : [];
@@ -18,17 +21,17 @@ export class BestSellerSectionComponent implements OnChanges {
 
   @Input()
   products: any;
-  somProducts: any
-  // ng(): void {
-  //   this.somProducts = this.products ? this.products.slice(0, 4) : [];
-  //   console.log(this.somProducts);
-  // }
+  somProducts: any;
   responsiveOptions = [
     { breakpoint: '1400px', numVisible: 3, numScroll: 1 },
     { breakpoint: '1199px', numVisible: 2, numScroll: 1 },
     { breakpoint: '767px', numVisible: 1, numScroll: 1 },
     { breakpoint: '575px', numVisible: 1, numScroll: 1 }
   ]
+
+
+  loaderCardsarr = [1, 2, 3, 4];
+
   // product =
   //   {
   //     id: 1,

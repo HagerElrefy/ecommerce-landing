@@ -1,0 +1,26 @@
+<div class="card-container" [ngClass]="textStyle">
+    <div class="relative card border-0">
+        <img [src]="data.image" alt="gifts" class="w-full object-cover" />
+
+        <div class="text-content overlay-content"
+            [ngClass]="textStyle === 'single' ? 'justify-content-end' : 'justify-content-center'">
+
+
+            <h3 class="pink-1" [ngClass]="textStyle === 'single' ? 'font-semibold' : 'font-bold'">
+                {{ data.title | uppercase }}
+            </h3>
+
+            <h4 class="blue-1 font-bold" *ngIf="data.subTitle">
+                {{ data.subTitle.first |titlecase}} <br> <span class="pink-1">{{data.subTitle.second |titlecase}}</span>
+                {{data.subTitle.third |titlecase}}
+            </h4>
+
+            <p class="blue-1" [ngClass]="textStyle === 'single' ? 'font-semibold blue-1' : 'blue-5 md:blue-1'">
+                {{ data.text }}
+            </p>
+
+            <app-basic-button [btnValue]="'Shop Now'"></app-basic-button>
+
+        </div>
+    </div>
+</div>

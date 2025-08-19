@@ -1,0 +1,19 @@
+.gifts div:nth-child(1) {
+    gap: 16px;
+}
+
+.gifts div:nth-child(1) {
+    gap: 16px;
+}
+
+.gifts div:nth-child(1) div {
+    border-radius: 14px;
+}
+
+.gifts>div:last-child {
+    margin: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}

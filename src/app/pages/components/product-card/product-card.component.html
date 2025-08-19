@@ -1,0 +1,38 @@
+<p-card [style]="{ overflow: 'hidden'}" styleClass="shadow-none border-none"
+    [styleClass]="isSlideCard ? 'px-md-12px shadow-none border-none' : 'shadow-none border-none'">
+
+
+
+    <ng-template #header>
+        <div class="card bg-pink-10 relative hover-container">
+            <img [src]="product.image" [alt]="product.title" class="object-cover" />
+
+            <div class="hover-buttons flex gap-2">
+                <button pButton
+                    class="bg-pink-1 text-white border-none border-circle w-3rem h-3rem flex align-items-center justify-content-center shadow-3">
+                    <i class="pi pi-eye"></i>
+                </button>
+                <button pButton
+                    class="bg-pink-1 text-white border-none border-circle w-3rem h-3rem flex align-items-center justify-content-center shadow-3">
+                    <i class="pi pi-heart"></i>
+                </button>
+            </div>
+        </div>
+    </ng-template>
+
+
+
+    <ng-template #title class="font-semibold"> {{product.title}} </ng-template>
+
+
+    <div class="flex justify-content-between align-items-center">
+        <div class="text-container flex flex-column">
+
+            <app-rating [rating]="product.rating.rate" class="text-yellow-400"></app-rating>
+            <p class="carnation font-bold">{{product.price |currency}}</p>
+        </div>
+        <button pButton class="shop-btn bg-purple-1 border-none cursor-pointer">
+            <i class="pi pi-shopping-bag "></i>
+        </button>
+    </div>
+</p-card>

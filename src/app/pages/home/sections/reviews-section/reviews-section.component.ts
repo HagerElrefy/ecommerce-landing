@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { SliderComponent } from "../../../../components/shared/slider/slider.component";
-import { ReviewCardComponent } from "../../../../components/review-card/review-card.component";
+import { SliderComponent } from "../../../../shared/slider/slider.component";
+import { ReviewCardComponent } from "../../../components/review-card/review-card.component";
 
 @Component({
   selector: 'app-reviews-section',

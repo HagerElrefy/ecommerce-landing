@@ -1,7 +1,8 @@
-<app-nav-bar></app-nav-bar>
-
-<app-categories-section></app-categories-section>
-<app-gifts-section></app-gifts-section>
+<div>
+    <app-nav-bar (dataEvent)="logInBtnClicked($event)"></app-nav-bar>
+    <app-categories-section></app-categories-section>
+    <app-gifts-section></app-gifts-section>
+</div>
 <app-features-section></app-features-section>
 <app-best-seller-section [products]="products"></app-best-seller-section>
 <app-products-section [products]="products"></app-products-section>
@@ -9,6 +10,5 @@
 <app-gallary-section></app-gallary-section>
 <app-reviews-section></app-reviews-section>
 <app-companies-section></app-companies-section>
-
-
-<app-footer></app-footer>
+<app-log-in-section [isLoginBtnClicked]="isLogInBtnClicked" (closed)="isLogInBtnClicked = false">
+</app-log-in-section>

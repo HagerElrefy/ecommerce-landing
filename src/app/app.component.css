@@ -1,1 +1,10 @@
-/*# sourceMappingURL=app.component.css.map */
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+@media (max-width: 480px) {
+  .home {
+    gap: 24px;
+  }
+}/*# sourceMappingURL=app.component.css.map */

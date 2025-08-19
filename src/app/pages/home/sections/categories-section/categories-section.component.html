@@ -1,4 +1,5 @@
-<section class="flex flex-column lg:flex-row justify-content-between align-items-center gap-4 m-2">
-    <app-category-card *ngFor="let category of categories" [category]="category" class="w-full lg:flex-1">
+<section
+    class="flex justify-content-between align-items-stretch md:align-content-center overflow-x-auto gap-3 lg:gap-0">
+    <app-category-card *ngFor="let category of categories" [category]="category">
     </app-category-card>
 </section>

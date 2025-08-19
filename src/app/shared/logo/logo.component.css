@@ -1,0 +1,10 @@
+.logo img {
+  width: 86px;
+  height: 86px;
+}
+@media (max-width: 480px) {
+  .logo img {
+    width: 54px;
+    height: 54px;
+  }
+}/*# sourceMappingURL=logo.component.css.map */

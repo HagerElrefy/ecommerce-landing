@@ -1,0 +1,12 @@
+.company-sec-title {
+  position: relative;
+}
+
+.company-sec-title::after {
+  content: "";
+  width: 50%;
+  color: #F82BA9;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}/*# sourceMappingURL=companies-section.component.css.map */

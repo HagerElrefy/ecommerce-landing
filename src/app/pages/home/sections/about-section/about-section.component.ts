@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { AvatarModule } from 'primeng/avatar';
 import { OverlayBadgeModule } from 'primeng/overlaybadge';
-import { BasicButtonComponent } from "../../../../components/shared/basic-button/basic-button.component";
+import { BasicButtonComponent } from "../../../../shared/basic-button/basic-button.component";
 
 @Component({
   selector: 'app-about-section',
