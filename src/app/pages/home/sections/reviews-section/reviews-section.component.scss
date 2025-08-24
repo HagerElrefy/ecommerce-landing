@@ -4,8 +4,17 @@
     background-blend-mode: multiply;
     background: rgba(248, 43, 169, 0.2);
     padding: 80px;
+    width: 88vw;
 
     @media (max-width:480px) {
         padding: 16px;
+    }
+}
+
+:host ::ng-deep .p-carousel-item:not(.p-carousel-item-end) {
+    padding-inline-end: 16px;
+
+    @media (max-width: 480px) {
+        padding-inline-end: 0;
     }
 }

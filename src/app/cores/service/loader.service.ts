@@ -9,14 +9,12 @@ export class LoaderService {
   loading = signal(false);
 
   show() {
-    setTimeout(() => {
-      this.loading.set(true);
-    }, 2000)
+    this.loading.set(true);
   }
 
   hide() {
     setTimeout(() => {
       this.loading.set(false);
-    }, 2000)
+    }, 1000)
   }
 }

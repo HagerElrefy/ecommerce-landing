@@ -6,6 +6,7 @@ import Aura from '@primeuix/themes/aura';
 import { routes } from './app.routes';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { productsLoadInterceptor } from './cores/interceptors/products-load.interceptor';
+import { MessageService } from 'primeng/api';
 
 
 export const appConfig: ApplicationConfig = {
@@ -14,5 +15,7 @@ export const appConfig: ApplicationConfig = {
         theme: {
             preset: Aura
         }
-    })]
+    }),
+        MessageService
+    ]
 };

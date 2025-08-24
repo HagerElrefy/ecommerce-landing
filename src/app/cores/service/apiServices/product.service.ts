@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BaseUrl } from '../../../enviroments/env.dev';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class ProductService {
   products: any;
 
   getAllProducts() {
-    return this.http.get("https://fakestoreapi.com/products");
+    return this.http.get(`${BaseUrl}products`);
   }
 
 }

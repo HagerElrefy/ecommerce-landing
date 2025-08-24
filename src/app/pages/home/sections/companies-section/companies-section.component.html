@@ -5,18 +5,9 @@
 
 
     <ngx-fast-marquee class="companies-logos" [speed]="50" direction="left">
-
         <div class="company-item" *ngFor="let company of companies">
             <img [src]="company" alt="company-logo" />
         </div>
     </ngx-fast-marquee>
 
-
-
-    <!-- <p-carousel [value]="companies" [numScroll]="1" [circular]="true" [autoplayInterval]="500"
-        [responsiveOptions]="responsiveOptions" [showIndicators]="false" [showNavigators]="false" dir="rtl">
-        <ng-template let-company pTemplate="item">
-            <img [src]="company" alt="company-logo" class="object-contain" />
-        </ng-template>
-    </p-carousel> -->
 </section>

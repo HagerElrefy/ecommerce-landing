@@ -24,37 +24,10 @@
     </div>
 
 
-    <div *ngIf="loader.loading(); else productsSlider">
-        <app-slider [data]="loaderCardsarr" [responsiveOptions]="responsiveOptions">
-            <ng-template let-product>
-                <app-product-skeleton></app-product-skeleton>
-            </ng-template>
-        </app-slider>
-    </div>
-
-    <ng-template #productsSlider>
-        <app-slider [data]="somProducts" [responsiveOptions]="responsiveOptions">
-            <ng-template let-product>
-                <app-product-card [product]="product" [isSlideCard]="true"></app-product-card>
-            </ng-template>
-        </app-slider>
-    </ng-template>
-
-
-
-    <!-- <div class="">
-        <div *ngIf="loader.loading()">
-            <app-slider [data]="loaderCardsarr" [responsiveOptions]="responsiveOptions">
-                <ng-template let-product>
-                    <app-product-skeleton></app-product-skeleton>
-                </ng-template>
-            </app-slider>
-        </div>
-        <app-slider [data]="somProducts" [responsiveOptions]="responsiveOptions">
-            <ng-template let-product>
-                <app-product-card [product]="product" [isSlideCard]="true"></app-product-card>
-            </ng-template>
-        </app-slider>
-    </div> -->
+    <app-slider [data]="somProducts" [responsiveOptions]="responsiveOptions">
+        <ng-template let-product>
+            <app-product-card [product]="product" [isSlideCard]="true"></app-product-card>
+        </ng-template>
+    </app-slider>
 
 </section>

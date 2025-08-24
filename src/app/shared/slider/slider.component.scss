@@ -6,12 +6,18 @@
     position: relative;
 }
 
+// :host ::ng-deep .p-carousel .p-carousel-item {
+//     max-width: 288px !important;
+//     background-color: #F82BA9;
+//     padding: 1px;
+// }
+
 :host ::ng-deep .p-carousel-prev-button {
     position: absolute !important;
     top: 35%;
     left: 10px;
     transform: translateY(-35%);
-    z-index: 20;
+    z-index: 2;
     width: 38px;
     height: 38px;
     border-radius: 50%;
@@ -33,7 +39,7 @@
     top: 35%;
     right: 10px;
     transform: translateY(-35%);
-    z-index: 30;
+    z-index: 2;
     width: 38px;
     height: 38px;
     border-radius: 50%;

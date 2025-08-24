@@ -6,12 +6,14 @@
                 {{ data.title |titlecase}}
             </h4>
 
-
-            <p class="font-semibold" [ngClass]="data.titleBaseColor ? 'blue-1' : 'sm:text-white'">
-                {{ data.text|titlecase}}
+            <p class="font-semibold" [ngClass]="data.titleBaseColor ? 'blue-1' : 'blue-1'">
+                {{ data.text | titlecase }}
             </p>
 
-            <button class="bg-pink-1 text-white">
+
+
+
+            <button class="bg-pink-1 text-white ">
                 {{data.btn|titlecase}}
             </button>
         </div>

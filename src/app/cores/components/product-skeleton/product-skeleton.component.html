@@ -1,11 +1,6 @@
-<div class="skeleton-card">
-    <p-skeleton class="media" />
-    <div class="body">
-        <div class="content-container">
-            <p-skeleton class="title" />
-            <p-skeleton class="rating" />
-            <p-skeleton class="pricing" />
-        </div>
-        <p-skeleton shape="circle" size="2rem" />
-    </div>
+<div class="loader-container" *ngIf="loader.loading()">
+    <p-skeleton shape="circle" size="2rem" />
+    <p-skeleton shape="circle" size="2rem" />
+    <p-skeleton shape="circle" size="2rem" />
+    <p-skeleton shape="circle" size="2rem" />
 </div>

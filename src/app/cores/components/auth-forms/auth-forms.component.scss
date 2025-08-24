@@ -1,0 +1,149 @@
+.auth-forms {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    width: 42%;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+}
+
+form::-webkit-scrollbar {
+    width: 6px;
+}
+
+form::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+form::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 30px;
+}
+
+form::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+
+.caption {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+
+.form-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-entries input {
+    width: 100%;
+    gap: 8px;
+    border-radius: 20px;
+    padding: 8px;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+    border: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+
+form .options {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 8px;
+}
+
+form .options label {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+form .options button {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 0%;
+    text-decoration-skip-ink: auto;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+form .account-ask p {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+form .account-ask span {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 0%;
+    text-decoration-skip-ink: auto;
+    cursor: pointer;
+}
+
+form button[type="submit"] {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    line-height: 50px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: rgba(248, 43, 169, 1);
+    color: #fff;
+}

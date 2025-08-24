@@ -8,14 +8,13 @@ import { LoaderService } from '../../../../cores/service/loader.service';
 
 @Component({
   selector: 'app-best-seller-section',
-  imports: [CommonModule, ProductCardComponent, SliderComponent, BasicButtonComponent, ProductSkeletonComponent],
+  imports: [CommonModule, ProductCardComponent, SliderComponent, BasicButtonComponent],
   templateUrl: './best-seller-section.component.html',
   styleUrl: './best-seller-section.component.scss'
 })
 export class BestSellerSectionComponent implements OnChanges {
   constructor(public loader: LoaderService) { }
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
     this.somProducts = this.products ? this.products.slice(0, 4) : [];
   }
 

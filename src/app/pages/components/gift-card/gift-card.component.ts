@@ -4,7 +4,7 @@ import { ButtonDirective } from 'primeng/button';
 
 @Component({
   selector: 'app-gift-card',
-  imports: [CommonModule, ButtonDirective],
+  imports: [CommonModule],
   templateUrl: './gift-card.component.html',
   styleUrl: './gift-card.component.scss'
 })

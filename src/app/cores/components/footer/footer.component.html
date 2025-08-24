@@ -1,5 +1,5 @@
 <footer class="flex flex-column justify-content-between">
-    <div class="links flex flex-wrap justify-content-center md:justify-content-evenly align-items-center">
+    <div class="links flex justify-content-center md:justify-content-evenly align-items-center">
         <a class="font-bold cursor-pointer" *ngFor="let link of footerLinks">
             {{ link }}
         </a>
@@ -14,9 +14,9 @@
         </p>
     </div>
 
-    <div class="flex justify-content-center align-items-center w-full md:w-auto m-auto">
+    <div class="flex justify-content-center align-items-center w-full">
         <p-inputgroup class="">
-            <input pInputText placeholder="Enter Your Email" class="" />
+            <input pInputText placeholder="Enter Your Email" />
             <p-button label="Subscribe" />
         </p-inputgroup>
     </div>

@@ -1,0 +1,130 @@
+<div class="auth-forms" (click)="hideAuthForms()">
+    <!-- logIn Form -->
+    <form [formGroup]="loginValidation" (click)="defualtDisabled($event)" (submit)="login(loginValidation)"
+        *ngIf="formToShow === 'login'">
+        <h4 class="caption">Login to your account</h4>
+        <div class="form-entries">
+            <input type="text" placeholder="Email" formControlName="email">
+            <small class="carnation" *ngIf="getErrorMessage(loginValidation,'email')">
+                {{ getErrorMessage(loginValidation,'email') }}
+            </small>
+            <input type="password" placeholder="Password" formControlName="password">
+            <small class="carnation" *ngIf="getErrorMessage(loginValidation,'password')">
+                {{ getErrorMessage(loginValidation,'password') }}
+            </small>
+        </div>
+        <div class="options">
+            <div class="flex gap-1">
+                <input type="checkbox" name="remind">
+                <label for="remind">Remind me</label>
+            </div>
+            <button class="pink-1" (click)="showForgetPassForm($event)">Forgot Password</button>
+        </div>
+        <div class="account-ask flex justify-content-center">
+            <p>No account? </p>
+            <span class="pink-1" (click)="showSignUpForm($event)">Create one here</span>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+
+
+    <!-- sign up Form -->
+    <form [formGroup]="signUpValidation" (click)="defualtDisabled($event)" (submit)="signUp(signUpValidation)"
+        *ngIf="formToShow === 'sginup'">
+        <h4 class="caption">Create account</h4>
+        <div class="form-entries">
+            <input type="text" placeholder="First Name" formControlName="firstName">
+            <small class="carnation" *ngIf="getErrorMessage(signUpValidation,'firstName')">
+                {{ getErrorMessage(signUpValidation,'firstName') }}
+            </small>
+
+            <input type="text" placeholder="Last Name" formControlName="lastName">
+            <small class="carnation" *ngIf="getErrorMessage(signUpValidation,'lastName')">
+                {{ getErrorMessage(signUpValidation,'lastName') }}
+            </small>
+
+
+
+            <input type="text" placeholder="Phone Number" formControlName="phone">
+            <small class="carnation" *ngIf="getErrorMessage(signUpValidation,'phone')">
+                {{ getErrorMessage(signUpValidation,'phone') }}
+            </small>
+
+
+            <input type="email" placeholder="Email" formControlName="email">
+            <small class="carnation" *ngIf="getErrorMessage(signUpValidation,'email')">
+                {{ getErrorMessage(signUpValidation,'email') }}
+            </small>
+
+            <input type="password" placeholder="Password" formControlName="password">
+            <small class="carnation" *ngIf="getErrorMessage(signUpValidation,'password')">
+                {{ getErrorMessage(signUpValidation,'password') }}
+            </small>
+
+            <input type="password" placeholder="Confirm Password" formControlName="rePassword">
+            <small class="carnation" *ngIf="getErrorMessage(signUpValidation,'rePassword')">
+                {{ getErrorMessage(signUpValidation,'rePassword') }}
+            </small>
+
+
+        </div>
+        <div class="account-ask flex justify-content-center">
+            <p>Already have an account? </p>
+            <span class="pink-1" (click)="showLogInForm($event)">Login</span>
+        </div>
+        <button type="submit">Create Account</button>
+    </form>
+
+
+    <!-- forget password Form -->
+    <form [formGroup]="ForgetPasswordValidation" (click)="defualtDisabled($event)"
+        (submit)="handleForgetPassword(ForgetPasswordValidation)" *ngIf="formToShow === 'forgetpass'">
+        <h4 class="caption">Forgot Your Password ?</h4>
+        <div class="form-entries">
+            <input type="text" placeholder="Email Or Phone Number" formControlName="email">
+            <small class="carnation" *ngIf="getErrorMessage(ForgetPasswordValidation,'email')">
+                {{ getErrorMessage(ForgetPasswordValidation,'email') }}
+            </small>
+        </div>
+        <button type="submit">Recover Password</button>
+    </form>
+
+
+    <!-- verify code Form -->
+    <form [formGroup]="loginValidation" (click)="defualtDisabled($event)" (submit)="handleVerifyCode()"
+        *ngIf="formToShow === 'verifycode'">
+        <h4 class="caption">Verify Code</h4>
+        <div class="form-entries">
+            <input type="text" placeholder="Enter Code">
+            <!-- <small class="carnation" *ngIf="getErrorMessage('email')">
+                {{ getErrorMessage('email') }}
+            </small> -->
+        </div>
+
+        <div class="account-ask flex justify-content-end">
+            <p>Didn’t receive a code? </p>
+            <span class="pink-1" (click)="resendCode()">Resend</span>
+        </div>
+        <button type="submit">Recover Password</button>
+    </form>
+
+    <!-- Set Password Form -->
+    <form [formGroup]="loginValidation" (click)="defualtDisabled($event)" (submit)="resetPassword()"
+        *ngIf="formToShow === 'setpass'">
+        <h4 class="caption">Set a Password</h4>
+        <div class="form-entries">
+            <input type="password" placeholder="Create Password" formControlName="password">
+            <!-- <small class="carnation" *ngIf="getErrorMessage('password')">
+                {{ getErrorMessage('password') }}
+            </small> -->
+            <input type="password" placeholder="Re-enter Password" formControlName="password">
+            <!-- <small class="carnation" *ngIf="getErrorMessage('password')">
+                {{ getErrorMessage('password') }}
+            </small> -->
+
+        </div>
+        <button type="submit">Set a Password</button>
+    </form>
+
+</div>
+<p-toast />

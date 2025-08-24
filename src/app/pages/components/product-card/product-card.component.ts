@@ -23,7 +23,6 @@ export class ProductCardComponent {
       this.product = changes["product"].currentValue;
     }
     if (changes["isSlideCard"]) {
-      console.log(changes["isSlideCard"].currentValue)
       this.isSlideCard = changes["isSlideCard"].currentValue
     }
   }
