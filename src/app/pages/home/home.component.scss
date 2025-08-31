@@ -6,3 +6,15 @@
     justify-content: space-between;
     gap: 5px;
 }
+
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-bottom: 80px;
+
+    @media (max-width:480px) {
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+}

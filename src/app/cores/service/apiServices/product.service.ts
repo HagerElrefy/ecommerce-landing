@@ -1,17 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BaseUrl } from '../../../enviroments/env.dev';
+import { BaseService } from './base.service';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProductService {
-  constructor(private http: HttpClient) { }
+export class ProductService extends BaseService {
+  constructor(http: HttpClient) {
+    super(http)
+  }
   products: any;
 
-  getAllProducts() {
-    return this.http.get(`${BaseUrl}products`);
-  }
+
 
 }
 

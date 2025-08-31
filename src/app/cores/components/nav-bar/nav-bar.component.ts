@@ -5,26 +5,50 @@ import { LogoComponent } from "../../../shared/logo/logo.component";
 import { ButtonDirective, ButtonModule } from "primeng/button";
 import { BasicButtonComponent } from '../../../shared/basic-button/basic-button.component';
 import { InputTextModule } from 'primeng/inputtext';
-import { Dialog } from 'primeng/dialog';
 import { UserService } from '../../service/apiServices/user.service';
 import { AuthFormsToggleService } from '../../service/auth-forms-toggle.service';
+import { Menu } from 'primeng/menu';
+import { MenuItem } from 'primeng/api';
 
 
 @Component({
   selector: 'app-nav-bar',
-  imports: [CommonModule, OverlayBadgeModule, LogoComponent, ButtonDirective, BasicButtonComponent, ButtonModule, InputTextModule],
+  imports: [CommonModule, OverlayBadgeModule, LogoComponent, ButtonDirective, BasicButtonComponent, ButtonModule, InputTextModule, Menu],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss'
 })
 export class NavBarComponent {
   constructor(public user: UserService, public loginFormFlag: AuthFormsToggleService) { }
-
-  // @Output() dataEvent = new EventEmitter<boolean>();
-  clickedOnLogInBtn() {
-    this.loginFormFlag.show();
+  ngOnInit() {
+    this.userOptions = [
+      {
+        items: [
+          {
+            label: 'Profile',
+            icon: 'pi pi-user',
+            command: () => {
+            }
+          },
+          {
+            label: 'Log out',
+            icon: 'pi pi-sign-out',
+            command: () => {
+              this.user.logOut();
+            }
+          }
+        ]
+      }
+    ];
 
   }
-  items = [
+  userOptions: MenuItem[] | undefined;
+
+
+  clickedOnLogInBtn() {
+    this.loginFormFlag.show();
+  }
+
+  links = [
     {
       label: 'Home',
       root: true,
@@ -43,7 +67,7 @@ export class NavBarComponent {
       root: true
     }
   ];
-  iconsItems = [{ icon: 'pi pi-heart', badge: true }, { icon: 'pi pi-shopping-bag', badge: true }, { icon: 'pi pi-user' }];
+  iconsItems = [{ icon: 'pi pi-heart', badge: true }, { icon: 'pi pi-shopping-bag', badge: true }];
   linksToggele: boolean = false;
   toggleShow() {
     this.linksToggele = !this.linksToggele

@@ -26,6 +26,9 @@ form {
 
 }
 
+// .disabled {
+
+// }
 form::-webkit-scrollbar {
     width: 6px;
 }
@@ -117,19 +120,30 @@ form .account-ask p {
     vertical-align: middle;
 }
 
-form .account-ask span {
+form .account-ask button {
     font-family: "Inter", sans-serif;
     font-weight: 600;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0%;
     vertical-align: middle;
+    color: #F82BA9;
     text-decoration: underline;
     text-decoration-style: solid;
     text-decoration-thickness: 0%;
     text-decoration-skip-ink: auto;
+    background: none;
+    border: none;
+    padding: 0;
     cursor: pointer;
 }
+
+form .account-ask button:disabled {
+
+    color: #FB95D4;
+    cursor: not-allowed;
+}
+
 
 form button[type="submit"] {
     font-family: 'Inter', sans-serif;

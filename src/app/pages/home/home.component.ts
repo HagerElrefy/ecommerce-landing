@@ -38,9 +38,10 @@ export class HomeComponent {
   test = [1, 2, 3, 4];
 
   ngOnInit(): void {
-    this.productService.getAllProducts().subscribe({
-      next: (products) => {
-        this.products = products;
+    this.productService.endPointValue = "products";
+    this.productService.getAll().subscribe({
+      next: (res) => {
+        this.products = res.products;
         console.log(this.products);
       },
       error: (err) => {

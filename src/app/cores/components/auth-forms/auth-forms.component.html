@@ -22,7 +22,7 @@
         </div>
         <div class="account-ask flex justify-content-center">
             <p>No account? </p>
-            <span class="pink-1" (click)="showSignUpForm($event)">Create one here</span>
+            <button class="pink-1" (click)="showSignUpForm($event)">Create one here</button>
         </div>
         <button type="submit">Login</button>
     </form>
@@ -61,16 +61,16 @@
                 {{ getErrorMessage(signUpValidation,'password') }}
             </small>
 
-            <input type="password" placeholder="Confirm Password" formControlName="rePassword">
-            <small class="carnation" *ngIf="getErrorMessage(signUpValidation,'rePassword')">
-                {{ getErrorMessage(signUpValidation,'rePassword') }}
+            <input type="password" placeholder="Confirm Password" formControlName="confirmPass">
+            <small class="carnation" *ngIf="getErrorMessage(signUpValidation,'confirmPass')">
+                {{ getErrorMessage(signUpValidation,'confirmPass') }}
             </small>
 
 
         </div>
         <div class="account-ask flex justify-content-center">
             <p>Already have an account? </p>
-            <span class="pink-1" (click)="showLogInForm($event)">Login</span>
+            <button class="pink-1" (click)="showLogInForm($event)">Login</button>
         </div>
         <button type="submit">Create Account</button>
     </form>
@@ -91,36 +91,39 @@
 
 
     <!-- verify code Form -->
-    <form [formGroup]="loginValidation" (click)="defualtDisabled($event)" (submit)="handleVerifyCode()"
-        *ngIf="formToShow === 'verifycode'">
+    <form [formGroup]="verifyCodeValidation" (click)="defualtDisabled($event)"
+        (submit)="handleVerifyCode(verifyCodeValidation)" *ngIf="formToShow === 'verifycode'">
         <h4 class="caption">Verify Code</h4>
         <div class="form-entries">
-            <input type="text" placeholder="Enter Code">
-            <!-- <small class="carnation" *ngIf="getErrorMessage('email')">
-                {{ getErrorMessage('email') }}
-            </small> -->
+            <input type="text" placeholder="Enter Code" formControlName="resetCode">
+            <small class="carnation" *ngIf="getErrorMessage(verifyCodeValidation ,'resetCode')">
+                {{ getErrorMessage(verifyCodeValidation ,'resetCode') }}
+            </small>
         </div>
 
         <div class="account-ask flex justify-content-end">
             <p>Didn’t receive a code? </p>
-            <span class="pink-1" (click)="resendCode()">Resend</span>
+            <button class="pink-1" [disabled]="timeLeft > 0" (click)="resendCode(ForgetPasswordValidation)">
+                Resend
+                <span *ngIf="timeLeft > 0">{{ timeLeft }}s</span>
+            </button>
         </div>
         <button type="submit">Recover Password</button>
     </form>
 
     <!-- Set Password Form -->
-    <form [formGroup]="loginValidation" (click)="defualtDisabled($event)" (submit)="resetPassword()"
-        *ngIf="formToShow === 'setpass'">
+    <form [formGroup]="resetPasswordValidation" (click)="defualtDisabled($event)"
+        (submit)="resetPassword(resetPasswordValidation)" *ngIf="formToShow === 'setpass'">
         <h4 class="caption">Set a Password</h4>
         <div class="form-entries">
             <input type="password" placeholder="Create Password" formControlName="password">
-            <!-- <small class="carnation" *ngIf="getErrorMessage('password')">
-                {{ getErrorMessage('password') }}
-            </small> -->
-            <input type="password" placeholder="Re-enter Password" formControlName="password">
-            <!-- <small class="carnation" *ngIf="getErrorMessage('password')">
-                {{ getErrorMessage('password') }}
-            </small> -->
+            <small class="carnation" *ngIf="getErrorMessage(resetPasswordValidation,'password')">
+                {{ getErrorMessage(resetPasswordValidation,'password') }}
+            </small>
+            <input type="password" placeholder="Re-enter Password" formControlName="confirmPass">
+            <small class="carnation" *ngIf="getErrorMessage(resetPasswordValidation,'confirmPass')">
+                {{ getErrorMessage(resetPasswordValidation,'confirmPass') }}
+            </small>
 
         </div>
         <button type="submit">Set a Password</button>

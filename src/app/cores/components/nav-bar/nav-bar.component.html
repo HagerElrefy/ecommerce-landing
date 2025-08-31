@@ -17,23 +17,24 @@
                 <i class="pi pi-times blue-1"></i>
             </button>
         </div>
-        <a class="cursor-pointer blue-1 hover:text-pink-500 transition-duration-200" *ngFor="let item of items">
-            {{ item.label|titlecase}}
+        <a class="cursor-pointer blue-1 hover:text-pink-500 transition-duration-200" *ngFor="let link of links">
+            {{ link.label|titlecase}}
         </a>
     </nav>
 
     <!-- Icons + Menu Toggle -->
     <div class="icons flex align-items-center pink-1">
-        <i class="pi pi-search"></i>
+        <p-button icon="pi pi-search" class="text-lg"></p-button>
         <!-- Icons -->
         @for (icon of iconsItems; track $index) {
-        @if (icon.badge) {
-        <i [class]="icon.icon" class="align-self-center cursor-pointer text-lg" *ngIf="user.user"></i>
+        <p-overlaybadge value="2" severity="danger" *ngIf="user.user()">
+            <p-button [icon]="icon.icon" styleClass="p-button-text p-button-rounded"></p-button>
+        </p-overlaybadge>
         }
-        @else {
-        <i [class]="icon.icon" class="align-self-center cursor-pointer text-lg" *ngIf="user.user"></i>
-        }
-        }
+        <p-menu #menu [model]="userOptions" [popup]="true" class="blue-1" />
+        <p-button (click)="menu.toggle($event)" icon="pi pi-user" *ngIf="user.user()" styleClass="text-lg">
+        </p-button>
+
 
 
         <!-- Mobile Menu Button -->
@@ -41,6 +42,6 @@
             <i class="pi pi-align-right text-2xl"></i>
         </div>
 
-        <app-basic-button [btnValue]="'log in'" (click)="clickedOnLogInBtn()" *ngIf="!user.user"></app-basic-button>
+        <app-basic-button [btnValue]="'log in'" (click)="clickedOnLogInBtn()" *ngIf="!user.user()"></app-basic-button>
     </div>
 </header>

@@ -6,10 +6,11 @@ import { FooterComponent } from "./cores/components/footer/footer.component";
 import { CommonModule } from '@angular/common';
 import { AuthFormsComponent } from "./cores/components/auth-forms/auth-forms.component";
 import { AuthFormsToggleService } from './cores/service/auth-forms-toggle.service';
+import { CategoriesComponent } from "./pages/categories/categories.component";
 // RouterOutlet,
 @Component({
   selector: 'app-root',
-  imports: [HomeComponent, NavBarComponent, FooterComponent, CommonModule, AuthFormsComponent],
+  imports: [HomeComponent, NavBarComponent, FooterComponent, CommonModule, AuthFormsComponent, CategoriesComponent, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

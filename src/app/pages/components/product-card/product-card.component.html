@@ -5,7 +5,7 @@
 
     <ng-template #header>
         <div class="card bg-pink-10 relative hover-container">
-            <img [src]="product.image" [alt]="product.title" class="object-cover" />
+            <img [src]="product.imgCover" [alt]="product.title" class="object-cover" />
 
             <div class="hover-buttons flex gap-2">
                 <button pButton
@@ -28,8 +28,13 @@
     <div class="flex justify-content-between align-items-center">
         <div class="text-container flex flex-column">
 
-            <app-rating [rating]="product.rating.rate" class="text-yellow-400"></app-rating>
-            <p class="carnation font-bold">{{product.price |currency}}</p>
+            <app-rating [rating]="product.rateAvg" class="text-yellow-400"></app-rating>
+            <p class="font-bold">
+                <span class="carnation">
+                    {{ (product.priceAfterDiscount || product.price) | currency }}
+                </span>
+                <span class="grey line-through" *ngIf="product.priceAfterDiscount">{{product.price|currency}}</span>
+            </p>
         </div>
         <button pButton class="shop-btn bg-purple-1 border-none cursor-pointer">
             <i class="pi pi-shopping-bag "></i>

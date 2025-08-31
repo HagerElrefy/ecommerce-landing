@@ -81,6 +81,10 @@ $green-shades: (
     10: #EBFBF6
 );
 
+.grey {
+    color: #DEE2E6;
+}
+
 /* 🔁 Generate Classes */
 @each $index, $color in $pink-shades {
     .pink-#{$index} {
